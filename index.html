@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+           
+      <div class="quiz-container">
+
+        <div class="nav-container">
+
+            <div class="nav-items">
+              <div class="nav-item">
+                <img class="nav-header-img" src="./img/logo.png">
+              </div>
+              <div class="nav-item">
+                <a class="nav-link text-font-rubik-regular option-active" id="option-0" href="#" onclick="loadStartPage(0)" id="item-1">
+                  Movie
+                </a>
+              </div>
+              <div class="nav-item">
+                <a class="nav-link text-font-rubik-regular" href="#" id="option-1" onclick="loadStartPage(1)">
+                  Sport</a>
+              </div>
+              <div class="nav-item">
+                <a class="nav-link text-font-rubik-regular" href="#" id="option-2" onclick="loadStartPage(2)">
+                  History</a>
+              </div>
+            </div>
+      
+        </div>
+        <div class="card quiz-card">
+          <div class="question-start" id="question-start">
+            <div class="text-font-PT-bold text-font-size-large">Welcome to</div>
+            <div class="text-font-PT-bold text-font-size-large">The Awesome <span id="question-category">HTML</span> Quiz</div>
+            <div class="text-font-PT-regular">Ready for the Challenge?</div>
+          </div>
+          <div class="question-start-btn" id="start-btn">
+            <button class="btn btn-orange text-font-rubik-regular button-m" id="start-question" onclick="showQuestion()">Start Now&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+          </div> 
+          <div class="question-end" style="display: none;" id="question-end">
+            <div class="question-end-header"><img src="./img/brain_result.png" alt=""></div>
+            <div class="qeustion-end-message">
+              <span class="text-font-rubik-bold">COMPLETE</span><br>
+              <span class="text-font-rubik-bold">HTML QUIZ</span>
+            </div>
+            <div class="question-end-score">
+              <div><span class="text-orange text-font-rubik-bold">YOUR SCORE</span></div>
+              <div>              
+                <span id="correctNumber" class="text-font-rubik-bold">10</span>
+                <span class="text-font-rubik-bold">/</span>
+                <span id="totoalNumber" class="text-font-rubik-bold">10</span>
+              </div>
+
+            </div>
+            <div class="question-end-button text-align">
+              <a class="btn btn-primary button-m text-font-rubik-regular" href="http://www.facebook.com/sharer/sharer.php?u=http://bing-xia.developerakademie.com/modul6/">SHARE</a><br>
+              <a class="text-blue text-font-rubik-regular" onclick="replay()" href="#">REPLAY</a>
+            </div>
+          </div>
+          <div class="card-body" id="question-body" style="display: none;">
+            <h5 class="card-title text-align text-font-rubik-medium question-height" id="question-text">Frage</h5>
+            <div class="card answer-select mb-2" id="answer-click-1" onclick="answer('1')">
+              <div class="card-body" >
+               <b>A</b><span id="answer-1">Answer</span>
+              </div>
+            </div>
+            <div class="card answer-select mb-2" id="answer-click-2" onclick="answer('2')">
+              <div class="card-body">
+                <b>B</b><sapn id="answer-2">Answer</span>
+              </div>
+            </div>
+            <div class="card answer-select mb-2" id="answer-click-3" onclick="answer('3')">
+              <div class="card-body">
+                <b>C</b><sapn id="answer-3">Answer</span>
+              </div>
+            </div>
+            <div class="card answer-select mb-2" id="answer-click-4" onclick="answer('4')">
+              <div class="card-body">
+                <b>D</b><sapn id="answer-4">Answer</span>
+              </div>
+            </div>
+            <div class="question-footer">
+              <div class="question-change" id="previous-question" onclick="previousQuestion()">
+                <img src="./img/left-angle-bracket.png">
+              </div>
+              <strong id="current-question">0</strong> von <strong id="total-questions">0</strong>
+              <div class="question-change" id="next-question" onclick="nextQuestion()">
+                <img src="./img/right-angle-bracket.png">
+              </div>
+              <button id="submit-button" type="button" class="btn btn-primary text-font-rubik-regular" style="display: none;" onclick="nextQuestion()">SUBMIT</button>
+            </div> 
+          </div>
+        </div> 
+
+      </div>
+
+    </div>
+    <div class="tropy-layout" id="tropy" style="display: none;">
+      <img src="./img/tropy.png">
+    </div>
+
+  </body >
+    
+
+</html>
